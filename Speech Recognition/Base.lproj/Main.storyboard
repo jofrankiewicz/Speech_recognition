@@ -22,11 +22,12 @@
                                 <rect key="frame" x="102.66666666666669" y="52" width="169" height="90"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="743" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0W-b1-Gtg">
-                                <rect key="frame" x="16" y="530" width="150" height="100"/>
+                                <rect key="frame" x="22" y="530" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ButtonES" image="es"/>
                                 <connections>
-                                    <segue destination="EG1-0F-U3z" kind="presentation" id="krz-KM-U0n"/>
+                                    <action selector="ESTranslate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JjX-eO-XCz"/>
+                                    <segue destination="EG1-0F-U3z" kind="presentation" identifier="ESConnection" id="krz-KM-U0n"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="743" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-NV-Vc4">
@@ -34,15 +35,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ButtonDE" image="de"/>
                                 <connections>
-                                    <segue destination="EG1-0F-U3z" kind="presentation" id="Uhp-IM-AbY"/>
+                                    <action selector="DETranslate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCy-Zu-nVs"/>
+                                    <segue destination="EG1-0F-U3z" kind="presentation" identifier="DEConnection" id="Uhp-IM-AbY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="743" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-ZB-x8z">
-                                <rect key="frame" x="16" y="652" width="150" height="100"/>
+                                <rect key="frame" x="22" y="651" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ButtonIT" image="it"/>
                                 <connections>
-                                    <segue destination="EG1-0F-U3z" kind="presentation" id="YIW-ZO-MC6"/>
+                                    <action selector="ITTranslate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fF-sB-upR"/>
+                                    <segue destination="EG1-0F-U3z" kind="presentation" identifier="ITConnection" id="YIW-ZO-MC6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="743" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qo-Gb-p4c">
@@ -50,16 +53,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ButtonFR" image="fr"/>
                                 <connections>
-                                    <segue destination="EG1-0F-U3z" kind="presentation" id="orO-T1-umh"/>
+                                    <action selector="FRTranslate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jX5-rP-TQj"/>
+                                    <segue destination="EG1-0F-U3z" kind="presentation" identifier="FRConnection" id="orO-T1-umh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CHOOSE YOUR LANGUAGE" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TpU-D3-Q1U">
-                                <rect key="frame" x="51" y="492" width="272" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.46780653799999999" green="0.63741260769999997" blue="0.36877394940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-hi-3aN">
                                 <rect key="frame" x="133" y="160" width="108" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,6 +76,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CHOOSE YOUR LANGUAGE" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TpU-D3-Q1U">
+                                <rect key="frame" x="51" y="486" width="272" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.46780653799999999" green="0.63741260769999997" blue="0.36877394940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.4678065379800711" green="0.63741260766983032" blue="0.36877394935594432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -114,11 +118,19 @@
                                 <rect key="frame" x="67" y="83" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TrI-0V-s9K">
-                                <rect key="frame" x="23" y="279" width="328" height="196"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-iu-dxs">
+                                <rect key="frame" x="169" y="748" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="Back:" destination="ig5-4Y-Qt4" eventType="touchUpInside" id="Y0H-Zl-CLl"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="BackConnection" id="CsM-61-Dhe"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b7k-LK-A8M">
+                                <rect key="frame" x="29" y="268" width="320" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cyan="0.048373287670000001" magenta="0.30623929799999999" yellow="0.18394156680000001" black="0.0095808699320000003" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -128,6 +140,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfn-ce-j6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ig5-4Y-Qt4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="900" y="129.31034482758622"/>
         </scene>
@@ -141,6 +154,6 @@
         <image name="it" width="2880" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="krz-KM-U0n"/>
+        <segue reference="YIW-ZO-MC6"/>
     </inferredMetricsTieBreakers>
 </document>

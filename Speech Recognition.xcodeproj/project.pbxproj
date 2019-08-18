@@ -16,6 +16,7 @@
 		BD9C43F52227E9FD0028E3AB /* mikrofon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD9C43F42227E9FD0028E3AB /* mikrofon.png */; };
 		BD9C43FB22288F7E0028E3AB /* mikrofon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD9C43FA22288F7E0028E3AB /* mikrofon.jpg */; };
 		BD9C43FD222890470028E3AB /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = BD9C43FC222890470028E3AB /* stop.png */; };
+		BDEFDD64230943F600FB62B9 /* SwiftGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEFDD63230943F600FB62B9 /* SwiftGoogleTranslate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BD9C43F42227E9FD0028E3AB /* mikrofon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mikrofon.png; sourceTree = "<group>"; };
 		BD9C43FA22288F7E0028E3AB /* mikrofon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mikrofon.jpg; sourceTree = "<group>"; };
 		BD9C43FC222890470028E3AB /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		BDEFDD63230943F600FB62B9 /* SwiftGoogleTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGoogleTranslate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				BD9C43FC222890470028E3AB /* stop.png */,
 				BD9C43F42227E9FD0028E3AB /* mikrofon.png */,
 				BD9C43E62227DBD50028E3AB /* Main.storyboard */,
+				BDEFDD63230943F600FB62B9 /* SwiftGoogleTranslate.swift */,
 				BD9C43E92227DBD60028E3AB /* Assets.xcassets */,
 				BD9C43EB2227DBD60028E3AB /* LaunchScreen.storyboard */,
 				BD9C43EE2227DBD60028E3AB /* Info.plist */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9C43E52227DBD50028E3AB /* ViewController.swift in Sources */,
+				BDEFDD64230943F600FB62B9 /* SwiftGoogleTranslate.swift in Sources */,
 				BD9C43E32227DBD50028E3AB /* AppDelegate.swift in Sources */,
 				BD20E2E4230886C800F255D1 /* TranslationViewController.swift in Sources */,
 			);

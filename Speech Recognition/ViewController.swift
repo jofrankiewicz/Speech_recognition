@@ -101,6 +101,29 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVAudioRecor
     @IBOutlet weak var FRButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     
+    @IBAction func DETranslate(_ sender: Any) {
+        performSegue(withIdentifier: "DEConnection", sender: self)
+    }
+    
+    @IBAction func ESTranslate(_ sender: Any) {
+        performSegue(withIdentifier: "ESConnection", sender: self)
+    }
+    
+    @IBAction func FRTranslate(_ sender: Any) {
+        performSegue(withIdentifier: "FRConnection", sender: self)
+    }
+    
+    @IBAction func ITTranslate(_ sender: Any) {
+        performSegue(withIdentifier: "ITConnection", sender: self)
+    }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "DEConnection") {
+            let svc = segue.destination as! TranslationViewController
+            svc.dataFromFirst = textView.text
+        }
+    }
+    
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US")) //Say something in english!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest? //manage audio buffor and send it in time during user's speech
     private var recognitionTask: SFSpeechRecognitionTask? //recognition speech
